@@ -1,7 +1,23 @@
-array = [887, 0, -48, -44]
-
-
+"""
+Objective -
+    1) Accept input of N elements
+    2) Breakdown input into smaller arrays of 2 or 1 elements
+    3) Combine results of all broken down elements and return a N element sorted list
+Notes:
+    Breaking down results in an ordered list which are sorted in it's scope
+        When combining you can have 2 arrays in left [ -5, 100] and right [ 1, 2]
+    -Need to iterate over all elements of both lists to get a comnined sorted list
+"""
 def sort(array) -> list:
+    """
+    Take an input of unsorted array.
+    check if array is of a single element, if so return that.
+    check if array is of 2 elements, sort those 2 elements and return them
+    otherwise use iteration to go over array elements and sort it to main portion using merge sort.
+    Refer to this video to understand merge sort- https://www.youtube.com/watch?v=mB5HXBb_HY8
+    :param array: a list of n elements that are not sorted
+    :return: a list of n elements that are sorted
+    """
     #  print(f'Starting with {array=}')
 
     if len(array) < 2:
